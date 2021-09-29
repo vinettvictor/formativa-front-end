@@ -2,9 +2,17 @@
 
 <form (submit)="insertar()">
     <input class="form-control" type="text" [(ngModel)]="cod" name="cod" placeholder="Ingrese Código del Producto" required><br>
+    <p style="color: red">{{errCodigo}}</p>
+
     <input class="form-control" type="text" [(ngModel)]="nombre" name="nombre" placeholder="Ingrese Nombre del Prducto" required><br>
+    <p style="color: red">{{errNombre}}</p>
+
     <input class="form-control" type="number" [(ngModel)]="precio" name="precio" placeholder="Ingrese Precio del Producto" required><br>
+    <p style="color: red">{{errPrecio}}</p>
+
     <input class="form-control" type="number" [(ngModel)]="cantidad" name="cantidad" placeholder="Ingrese Stock del Producto" required><br>
+    <p style="color: red">{{errCantidad}}</p>
+
     <button type="submit" class="btn btn-success">Guardar</button>
 </form>
 

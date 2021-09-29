@@ -14,6 +14,11 @@ export class RegistroProductoComponent implements OnInit {
   cantidad: number = 0;
   precio: number = 0;
 
+  errNombre: string = "";
+  errCodigo: string = "";
+  errCantidad: string = "";
+  errPrecio: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -26,6 +31,24 @@ export class RegistroProductoComponent implements OnInit {
   }
 
   insertar(){
+    this.errNombre = "";
+    this.errCodigo = "";
+    this.errPrecio = "";
+    this.errCantidad = "";
+
+    if(this.nombre==""){
+      this.errNombre = "Error, ingrese un nombre"
+    }
+    if(this.cod==""){
+      this.errCodigo = "Error, ingrese un código"
+    }
+    if(this.precio==null){
+      this.errPrecio = "Error,ingrese un precio"
+    }
+    if(this.nombre==""){
+      this.errCantidad = "Error, ingrese la cantidad"
+    }
+
     console.log(this.nombre, this.cantidad, this.precio, this.cod);
   }
 }

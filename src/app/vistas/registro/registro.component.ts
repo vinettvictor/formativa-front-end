@@ -22,9 +22,11 @@ export class RegistroComponent implements OnInit {
   this.valido = false;
 
     if (nombre!=""){
-      if (nombre.length < 4 || nombre.length >10){
+      if (nombre.length > 4 && nombre.length <10){
           console.log("nombre correcto", nombre);
-      } 
+      }else {
+        console.log("nombre incorrecto");
+      }
       if(email!=null) {
         let regex = /[\w-\.]{2,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/;
             if (regex.test(email.trim())) {
