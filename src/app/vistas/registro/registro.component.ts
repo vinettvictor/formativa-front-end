@@ -19,6 +19,8 @@ export class RegistroComponent implements OnInit {
 
 
   enviar(email: string, nombre: string, telefono: string|any): void{
+  this.valido = false;
+
     if (nombre!=""){
       if (nombre.length < 4 || nombre.length >10){
           console.log("nombre correcto", nombre);
