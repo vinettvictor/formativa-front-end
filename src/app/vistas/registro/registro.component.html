@@ -1,0 +1,30 @@
+<div formGroupName="registro">
+
+    <h1 class="py-sm-4">Formulario</h1>
+
+    <form (submit)="enviar(email,nombre,telefono)">
+
+        <div class="input-group input-group-lg">
+
+            <input type="text" [(ngModel)]="nombre" class="form-control mb-3 mr-2 form-control-lg" placeholder="Ingrese su Nombre" name="nombre" required>
+        </div>
+
+
+        <div class="input-group input-group-lg">
+
+            <input id="email" type="email" [(ngModel)]="email" class="form-control mb-3 mr-2 form-control-lg email" placeholder="Ingrese su Email" name="email" required>
+
+        </div>
+
+        <div class="input-group input-group-lg">
+
+            <input type="text" [(ngModel)]="telefono" class="form-control mb-3 mr-2 form-control-lg" placeholder="Ingrese telefono (XXX-XXX-XXXX)" name="telefono" required>
+
+        </div>
+        <h6 class="text-muted">El formulario es válido? {{valido}}</h6>
+
+        <button type="submit" class="btn btn-outline-danger my-4 btn-sm py-3 text-uppercase w-50 registro">Enviar</button>
+
+
+    </form>
+</div>

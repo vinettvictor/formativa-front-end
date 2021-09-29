@@ -1,0 +1,24 @@
+<h1 class="text-center">Registro de productos</h1>
+
+<form (submit)="insertar()">
+    <input class="form-control" type="text" [(ngModel)]="cod" name="cod" placeholder="Ingrese Código del Producto" required><br>
+    <input class="form-control" type="text" [(ngModel)]="nombre" name="nombre" placeholder="Ingrese Nombre del Prducto" required><br>
+    <input class="form-control" type="number" [(ngModel)]="precio" name="precio" placeholder="Ingrese Precio del Producto" required><br>
+    <input class="form-control" type="number" [(ngModel)]="cantidad" name="cantidad" placeholder="Ingrese Stock del Producto" required><br>
+    <button type="submit" class="btn btn-success">Guardar</button>
+</form>
+
+<ul>
+    <li>
+        <p>Código: {{cod}}</p>
+    </li>
+    <li>
+        <p>Nombre: {{nombre}}</p>
+    </li>
+    <li>
+        <p>Precio: {{precio}}</p>
+    </li>
+    <li>
+        <p>Cantidad: {{cantidad}}</p>
+    </li>
+</ul>
